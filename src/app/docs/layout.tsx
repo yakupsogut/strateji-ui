@@ -1,80 +1,101 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-const navigation = [
-  {
-    title: "Başlangıç",
-    items: [
-      {
-        title: "Giriş",
-        href: "/docs",
-      },
-      {
-        title: "Kurulum",
-        href: "/docs/installation",
-      },
-    ],
-  },
-  {
-    title: "Bileşenler",
-    items: [
-      {
-        title: "Button",
-        href: "/docs/components/button",
-      },
-      {
-        title: "Alert",
-        href: "/docs/components/alert",
-      },
-      {
-        title: "Toast",
-        href: "/docs/components/toast",
-      },
-      {
-        title: "Card",
-        href: "/docs/components/card",
-      },
-    ],
-  },
-];
+export default function DocsLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
 
-export default function DocsLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+  const isActive = (path: string) => {
+    return pathname === path;
+  };
+
   return (
     <div className="flex min-h-screen">
-      {/* Sidebar */}
-      <div className="hidden lg:block fixed w-64 h-screen border-r bg-background">
-        <div className="space-y-4 py-4">
-          <div className="px-3 py-2">
-            <h2 className="mb-2 px-4 text-lg font-semibold">Dokümantasyon</h2>
-            <div className="space-y-1">
-              {navigation.map((section) => (
-                <div key={section.title} className="space-y-2">
-                  <h3 className="px-4 text-sm font-medium text-muted-foreground">
-                    {section.title}
-                  </h3>
-                  {section.items.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="block px-4 py-1.5 text-sm hover:bg-muted rounded-md transition-colors"
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
+      <aside className="w-64 border-r p-4 space-y-4">
+        <div>
+          <h2 className="font-semibold mb-2">Başlangıç</h2>
+          <ul className="space-y-1">
+            <li>
+              <Link
+                href="/docs/installation"
+                className={`block p-2 rounded-lg hover:bg-muted ${
+                  isActive("/docs/installation") ? "bg-muted" : ""
+                }`}
+              >
+                Kurulum
+              </Link>
+            </li>
+          </ul>
         </div>
-      </div>
 
-      {/* Main content */}
-      <div className="flex-1 lg:pl-64">
-        <main className="min-h-screen">{children}</main>
-      </div>
+        <div>
+          <h2 className="font-semibold mb-2">Komponentler</h2>
+          <ul className="space-y-1">
+            <li>
+              <Link
+                href="/docs/components/alert"
+                className={`block p-2 rounded-lg hover:bg-muted ${
+                  isActive("/docs/components/alert") ? "bg-muted" : ""
+                }`}
+              >
+                Alert
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/docs/components/alert-dialog"
+                className={`block p-2 rounded-lg hover:bg-muted ${
+                  isActive("/docs/components/alert-dialog") ? "bg-muted" : ""
+                }`}
+              >
+                Alert Dialog
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/docs/components/button"
+                className={`block p-2 rounded-lg hover:bg-muted ${
+                  isActive("/docs/components/button") ? "bg-muted" : ""
+                }`}
+              >
+                Button
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/docs/components/strateji-button"
+                className={`block p-2 rounded-lg hover:bg-muted ${
+                  isActive("/docs/components/strateji-button") ? "bg-muted" : ""
+                }`}
+              >
+                Strateji Button
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/docs/components/card"
+                className={`block p-2 rounded-lg hover:bg-muted ${
+                  isActive("/docs/components/card") ? "bg-muted" : ""
+                }`}
+              >
+                Card
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/docs/components/toast"
+                className={`block p-2 rounded-lg hover:bg-muted ${
+                  isActive("/docs/components/toast") ? "bg-muted" : ""
+                }`}
+              >
+                Toast
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <main className="flex-1">{children}</main>
     </div>
   );
 } 

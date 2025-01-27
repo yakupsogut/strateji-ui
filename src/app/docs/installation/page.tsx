@@ -9,7 +9,7 @@ export default function InstallationPage() {
         <div>
           <h1 className="text-3xl font-bold">Kurulum</h1>
           <p className="text-muted-foreground">
-            Strateji UI'yı projenize nasıl ekleyeceğinizi öğrenin.
+            Strateji UI&apos;yı projenize nasıl ekleyeceğinizi öğrenin.
           </p>
         </div>
 
@@ -29,7 +29,7 @@ export default function InstallationPage() {
               Stil dosyasını projenizin ana dosyasında import edin:
             </p>
             <pre className="bg-muted p-4 rounded-lg overflow-x-auto">
-              <code>import "strateji-ui/styles.css";</code>
+              <code>import &quot;strateji-ui/styles.css&quot;;</code>
             </pre>
           </Card>
         </div>
@@ -38,7 +38,7 @@ export default function InstallationPage() {
           <h2 className="text-2xl font-semibold">Dokümantasyonu Görüntüleme</h2>
           <Card className="p-6">
             <p className="mb-4">
-              Dokümantasyonu local'de görüntülemek için aşağıdaki komutu çalıştırın:
+              Dokümantasyonu local&apos;de görüntülemek için aşağıdaki komutu çalıştırın:
             </p>
             <pre className="bg-muted p-4 rounded-lg overflow-x-auto">
               <code>npx strateji-docs</code>

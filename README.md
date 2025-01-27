@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Strateji UI
 
-## Getting Started
+Modern ve özelleştirilebilir React UI bileşenleri kütüphanesi. Tailwind CSS ile stillendirilmiş, TypeScript ile yazılmış ve Next.js 15+ ile uyumlu.
 
-First, run the development server:
+## Özellikler
+
+- 🎨 Modern ve özelleştirilebilir tasarım
+- 📱 Responsive ve mobile-first yaklaşım
+- 🌙 Koyu/açık tema desteği
+- 🔍 TypeScript ile tip güvenliği
+- ⚡ Yüksek performans
+- 📦 Kolay entegrasyon
+- 📚 Kapsamlı dokümantasyon
+
+## Kurulum
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install strateji-ui
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Hızlı Başlangıç
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Tailwind CSS yapılandırmanıza Strateji UI'ın stil dosyasını ekleyin:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```js
+// tailwind.config.js
+module.exports = {
+  content: [
+    // ...
+    "./node_modules/strateji-ui/**/*.{js,ts,jsx,tsx}",
+  ],
+}
+```
 
-## Learn More
+2. Stil dosyasını import edin:
 
-To learn more about Next.js, take a look at the following resources:
+```js
+import "strateji-ui/styles.css";
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Komponentleri kullanmaya başlayın:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```jsx
+import { StratejiButton, Alert, Toast } from "strateji-ui";
 
-## Deploy on Vercel
+function App() {
+  return (
+    <div>
+      <StratejiButton variant="primary">
+        Tıkla
+      </StratejiButton>
+    </div>
+  );
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Dokümantasyon
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Detaylı dokümantasyon için aşağıdaki komutu çalıştırın:
+
+```bash
+npx strateji-docs
+```
+
+## Komponentler
+
+- **Alert**: Kullanıcıya önemli bilgileri göstermek için
+- **Alert Dialog**: Onay gerektiren işlemler için modal dialog
+- **Button**: Temel düğme bileşeni
+- **Strateji Button**: Özelleştirilmiş modern düğme bileşeni
+- **Card**: İçerikleri gruplamak için kart bileşeni
+- **Toast**: Geçici bildirimler için toast bileşeni
+
+## Gereksinimler
+
+- React 19+
+- Next.js 15+
+- Tailwind CSS 3+
+- Node.js 18+
+
+## Katkıda Bulunma
+
+1. Bu depoyu fork edin
+2. Yeni bir branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Değişikliklerinizi commit edin (`git commit -m 'feat: add amazing feature'`)
+4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
+5. Pull Request oluşturun
+
+## Lisans
+
+MIT lisansı altında dağıtılmaktadır. Daha fazla bilgi için `LICENSE` dosyasına bakın.
+
+## İletişim
+
+Strateji Team - [info@strateji.com](mailto:info@strateji.com)
+
+Proje Linki: [https://github.com/strateji/strateji-ui](https://github.com/strateji/strateji-ui)

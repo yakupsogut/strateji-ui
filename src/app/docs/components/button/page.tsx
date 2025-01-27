@@ -42,7 +42,7 @@ export default function ButtonDoc() {
             <h3 className="text-lg font-semibold mb-4">Durumlar</h3>
             <div className="flex flex-wrap gap-4">
               <Button disabled>Disabled</Button>
-              <Button loading>Loading</Button>
+              <Button isLoading>Loading</Button>
             </div>
           </Card>
         </div>
@@ -64,7 +64,7 @@ export default function ButtonDoc() {
 
 // Özel durumlar
 <Button disabled>Disabled</Button>
-<Button loading>Loading</Button>`}</code>
+<Button isLoading>Loading</Button>`}</code>
             </pre>
           </Card>
         </div>
@@ -76,13 +76,13 @@ export default function ButtonDoc() {
               <div>
                 <h3 className="font-semibold">variant</h3>
                 <p className="text-sm text-muted-foreground">
-                  Type: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"
+                  Type: &quot;default&quot; | &quot;destructive&quot; | &quot;outline&quot; | &quot;secondary&quot; | &quot;ghost&quot; | &quot;link&quot;
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold">size</h3>
                 <p className="text-sm text-muted-foreground">
-                  Type: "default" | "sm" | "lg"
+                  Type: &quot;default&quot; | &quot;sm&quot; | &quot;lg&quot;
                 </p>
               </div>
               <div>
@@ -92,7 +92,7 @@ export default function ButtonDoc() {
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold">loading</h3>
+                <h3 className="font-semibold">isLoading</h3>
                 <p className="text-sm text-muted-foreground">
                   Type: boolean
                 </p>

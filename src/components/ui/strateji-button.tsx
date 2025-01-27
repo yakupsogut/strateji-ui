@@ -22,10 +22,6 @@ const buttonVariants = cva(
         true: "w-full",
         false: "w-auto",
       },
-      disabled: {
-        true: "opacity-50 cursor-not-allowed pointer-events-none",
-        false: "",
-      },
       withIcon: {
         true: "inline-flex items-center gap-2",
         false: "",
@@ -35,7 +31,6 @@ const buttonVariants = cva(
       variant: "primary",
       size: "normal",
       fullWidth: false,
-      disabled: false,
       withIcon: false,
     },
   }
@@ -43,13 +38,13 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+    Omit<VariantProps<typeof buttonVariants>, 'disabled'> {
   asChild?: boolean
   icon?: React.ReactNode
 }
 
 const StratejiButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, fullWidth, disabled, withIcon, icon, children, ...props }, ref) => {
+  ({ className, variant, size, fullWidth, disabled, icon, children, ...props }, ref) => {
     return (
       <button
         className={cn(
@@ -57,10 +52,10 @@ const StratejiButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
             variant,
             size,
             fullWidth,
-            disabled,
             withIcon: !!icon,
             className
-          })
+          }),
+          disabled && "opacity-50 cursor-not-allowed pointer-events-none"
         )}
         ref={ref}
         disabled={disabled}
