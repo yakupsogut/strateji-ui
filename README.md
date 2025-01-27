@@ -70,6 +70,7 @@ npx strateji-docs
 - **Strateji Button**: Özelleştirilmiş modern düğme bileşeni
 - **Card**: İçerikleri gruplamak için kart bileşeni
 - **Toast**: Geçici bildirimler için toast bileşeni
+- **Skeleton**: Sayfa yüklenirken içerik yerleşimini gösteren yükleme durumu bileşeni
 
 ## Gereksinimler
 

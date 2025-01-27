@@ -92,6 +92,16 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
                 Toast
               </Link>
             </li>
+            <li>
+              <Link
+                href="/docs/components/skeleton"
+                className={`block p-2 rounded-lg hover:bg-muted ${
+                  isActive("/docs/components/skeleton") ? "bg-muted" : ""
+                }`}
+              >
+                Skeleton
+              </Link>
+            </li>
           </ul>
         </div>
       </aside>

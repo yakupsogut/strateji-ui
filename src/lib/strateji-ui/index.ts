@@ -38,3 +38,5 @@ export * from '../utils'
 // Types
 export type { ButtonProps } from '../../components/ui/button' 
 export type { ToastProps, ToastActionElement } from '../../components/ui/toast' 
+
+export * from "@/components/ui/skeleton"; 
