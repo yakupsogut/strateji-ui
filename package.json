@@ -1,24 +1,51 @@
 {
-  "name": "@strateji/ui",
-  "version": "0.1.0",
-  "private": false,
+  "name": "strateji-ui",
+  "version": "0.1.20",
   "description": "Modern ve kullanışlı React UI bileşenleri kütüphanesi",
   "author": "Strateji Team",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "style": "styles.css",
+  "bin": {
+    "strateji-docs": "./dist/cli/docs.js"
+  },
+  "files": [
+    "dist",
+    "styles.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./styles.css": "./styles.css"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:lib": "tsup src/lib/strateji-ui/index.ts --format cjs,esm --dts --tsconfig tsconfig.lib.json",
-    "clean": "rm -rf dist",
+    "build:lib": "tsup src/lib/strateji-ui/index.ts src/cli/docs.ts --format cjs,esm --dts --tsconfig tsconfig.lib.json && copy src\\lib\\strateji-ui\\styles.css styles.css",
+    "clean": "rm -rf dist styles.css",
     "publish:lib": "npm run build:lib && npm publish --access public"
   },
+  "peerDependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.474.0",
+    "next": ">=15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
   "dependencies": {
+    "@radix-ui/react-alert-dialog": "^1.1.5",
     "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-toast": "^1.2.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.474.0",
@@ -30,7 +57,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@shadcn/ui": "^0.0.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -40,22 +66,5 @@
     "tailwindcss": "^3.4.1",
     "tsup": "^8.3.5",
     "typescript": "^5"
-  },
-  "peerDependencies": {
-    "next": ">=15.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "keywords": [
-    "react",
-    "nextjs",
-    "ui",
-    "components",
-    "typescript",
-    "tailwindcss"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yakupsogut/strateji-ui"
   }
 }

@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --strateji-background: 0 0% 100%;
+    --strateji-foreground: 240 10% 3.9%;
+    --strateji-card: 0 0% 100%;
+    --strateji-card-foreground: 240 10% 3.9%;
+    --strateji-popover: 0 0% 100%;
+    --strateji-popover-foreground: 240 10% 3.9%;
+    --strateji-primary: 240 5.9% 10%;
+    --strateji-primary-foreground: 0 0% 98%;
+    --strateji-secondary: 240 4.8% 95.9%;
+    --strateji-secondary-foreground: 240 5.9% 10%;
+    --strateji-muted: 240 4.8% 95.9%;
+    --strateji-muted-foreground: 240 3.8% 46.1%;
+    --strateji-accent: 240 4.8% 95.9%;
+    --strateji-accent-foreground: 240 5.9% 10%;
+    --strateji-destructive: 0 84.2% 60.2%;
+    --strateji-destructive-foreground: 0 0% 98%;
+    --strateji-border: 240 5.9% 90%;
+    --strateji-input: 240 5.9% 90%;
+    --strateji-ring: 240 5.9% 10%;
+    --strateji-radius: 0.5rem;
+  }
+
+  .dark {
+    --strateji-background: 240 10% 3.9%;
+    --strateji-foreground: 0 0% 98%;
+    --strateji-card: 240 10% 3.9%;
+    --strateji-card-foreground: 0 0% 98%;
+    --strateji-popover: 240 10% 3.9%;
+    --strateji-popover-foreground: 0 0% 98%;
+    --strateji-primary: 0 0% 98%;
+    --strateji-primary-foreground: 240 5.9% 10%;
+    --strateji-secondary: 240 3.7% 15.9%;
+    --strateji-secondary-foreground: 0 0% 98%;
+    --strateji-muted: 240 3.7% 15.9%;
+    --strateji-muted-foreground: 240 5% 64.9%;
+    --strateji-accent: 240 3.7% 15.9%;
+    --strateji-accent-foreground: 0 0% 98%;
+    --strateji-destructive: 0 62.8% 30.6%;
+    --strateji-destructive-foreground: 0 0% 98%;
+    --strateji-border: 240 3.7% 15.9%;
+    --strateji-input: 240 3.7% 15.9%;
+    --strateji-ring: 240 4.9% 83.9%;
+  }
+} 
