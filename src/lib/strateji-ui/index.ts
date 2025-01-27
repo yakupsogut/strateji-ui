@@ -32,6 +32,13 @@ export {
 export { Toaster } from '../../components/ui/toaster'
 export { useToast } from '../../hooks/use-toast'
 
+export {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent
+} from '../../components/ui/tabs'
+
 // Utils
 export * from '../utils'
 

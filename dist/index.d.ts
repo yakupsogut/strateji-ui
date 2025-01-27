@@ -3,6 +3,7 @@ import * as React$1 from 'react';
 import { VariantProps } from 'class-variance-authority';
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 import * as ToastPrimitives from '@radix-ui/react-toast';
+import * as TabsPrimitive from '@radix-ui/react-tabs';
 import { ClassValue } from 'clsx';
 
 declare const buttonVariants$1: (props?: ({
@@ -90,8 +91,13 @@ declare function useToast(): {
     toasts: ToasterToast[];
 };
 
+declare const Tabs: React$1.ForwardRefExoticComponent<TabsPrimitive.TabsProps & React$1.RefAttributes<HTMLDivElement>>;
+declare const TabsList: React$1.ForwardRefExoticComponent<Omit<TabsPrimitive.TabsListProps & React$1.RefAttributes<HTMLDivElement>, "ref"> & React$1.RefAttributes<HTMLDivElement>>;
+declare const TabsTrigger: React$1.ForwardRefExoticComponent<Omit<TabsPrimitive.TabsTriggerProps & React$1.RefAttributes<HTMLButtonElement>, "ref"> & React$1.RefAttributes<HTMLButtonElement>>;
+declare const TabsContent: React$1.ForwardRefExoticComponent<Omit<TabsPrimitive.TabsContentProps & React$1.RefAttributes<HTMLDivElement>, "ref"> & React$1.RefAttributes<HTMLDivElement>>;
+
 declare function cn(...inputs: ClassValue[]): string;
 
 declare function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>): React$1.JSX.Element;
 
-export { Alert, AlertDescription, AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, AlertDialogPortal, AlertDialogTitle, AlertDialogTrigger, AlertTitle, Button, type ButtonProps$1 as ButtonProps, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Skeleton, StratejiButton, Toast$1 as Toast, ToastAction, type ToastActionElement, ToastClose, ToastDescription, type ToastProps, ToastProvider, ToastTitle, ToastViewport, Toaster, buttonVariants$1 as buttonVariants, cn, useToast };
+export { Alert, AlertDescription, AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogOverlay, AlertDialogPortal, AlertDialogTitle, AlertDialogTrigger, AlertTitle, Button, type ButtonProps$1 as ButtonProps, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Skeleton, StratejiButton, Tabs, TabsContent, TabsList, TabsTrigger, Toast$1 as Toast, ToastAction, type ToastActionElement, ToastClose, ToastDescription, type ToastProps, ToastProvider, ToastTitle, ToastViewport, Toaster, buttonVariants$1 as buttonVariants, cn, useToast };

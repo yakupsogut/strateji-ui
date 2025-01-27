@@ -71,6 +71,7 @@ npx strateji-docs
 - **Card**: İçerikleri gruplamak için kart bileşeni
 - **Toast**: Geçici bildirimler için toast bileşeni
 - **Skeleton**: Sayfa yüklenirken içerik yerleşimini gösteren yükleme durumu bileşeni
+- **Tabs**: İçeriği sekmeler halinde organize etmek için kullanılan bileşen
 
 ## Gereksinimler
 
